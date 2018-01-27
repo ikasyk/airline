@@ -59,7 +59,6 @@ public class AirlineCompany {
      * @return list of aircrafts.
      */
     public List<Aircraft> getInFuelConsumptionRange(double from, double to) {
-        System.out.println(aircrafts);
         return aircrafts.stream()
                 .filter(a -> Double.compare((double)a.getFuelPerHour().getValue(), to) == -1)
                 .filter(a -> Double.compare(from, (double)a.getFuelPerHour().getValue()) == -1)
