@@ -65,6 +65,12 @@ public class AirlineCompany {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Reads aircrafts data from xls file.
+     * @param file the path to the file.
+     * @throws IOException if file reading thorw an exception.
+     */
+
     public void addAircraftsFromFile(String file) throws IOException {
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(file);
 
@@ -96,10 +102,18 @@ public class AirlineCompany {
         }
     }
 
+    /**
+     * Returns count of aircrafts.
+     * @return size of read aircrafts.
+     */
     public int getAircraftsCount() {
         return aircrafts.size();
     }
 
+    /**
+     * Returns array with all aircrafts.
+     * @return array with aircrafts.
+     */
     public Aircraft[] getAllAircrafts() {
         Aircraft[] array = new Aircraft[aircrafts.size()];
         return aircrafts.toArray(array);
